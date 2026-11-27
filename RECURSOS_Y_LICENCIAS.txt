@@ -1,0 +1,25 @@
+RECURSOS Y LICENCIAS
+
+Código, textos, composición visual y recursos SVG/CSS creados específicamente para esta entrega formativa del Centro IBEROamericano.
+No se han utilizado fotografías de obras, oficinas, clientes ni resultados de negocio. Las composiciones de portada son conceptuales; los gráficos del informe se generan desde los datos introducidos por el usuario.
+
+Fuentes locales en assets/fonts/: Noto Sans Display y Noto Sans (SIL Open Font License 1.1); DejaVu Sans Mono (licencia Bitstream Vera; modificaciones DejaVu de dominio público). Los nombres internos de los subconjuntos son Site Display, Site Text y Site Mono. Las licencias y atribuciones completas se conservan en assets/fonts/LICENSES.txt.
+Las fuentes de respaldo Georgia y Arial son fuentes del sistema del visitante y no se redistribuyen.
+No hay CDN, bibliotecas remotas, fotografías de stock ni servicios externos necesarios para ejecutar el sitio.
+
+Fuentes técnicas consultadas el 25 de noviembre de 2026
+
+- MDN, Window.localStorage: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+  El almacenamiento pertenece al origen y puede fallar. En archivos file: su comportamiento depende del navegador. Por eso cada herramienta avisa y permite respaldar.
+- MDN, BigInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt
+  Se emplean enteros de precisión arbitraria para el cálculo. El respaldo conserva las entradas como texto decimal y no serializa BigInt directamente.
+- MDN, serialización de BigInt: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/BigInt_not_serializable
+  Contexto técnico del diseño de respaldos JSON.
+- Netlify, configuración por archivo: https://docs.netlify.com/build/configure-builds/file-based-configuration/
+  Se incluye netlify.toml con publicación del directorio actual. Esta entrega no registra ni publica ningún sitio.
+
+REVISIÓN VISUAL 26 NOVIEMBRE
+assets/hero-illustration.svg: ilustración vectorial original del flujo de trabajo, sin métricas ni resultados reales. Código, iconos y animaciones locales preparados para esta entrega. assets/premium.css y experience.js aportan la nueva interfaz y movimiento reducido.
+assets/architecture-premium.png: imagen conceptual generada para esta entrega. Representa materiales de construcción y un espacio de trabajo; no documenta una obra, oficina ni instalación real de Carlos.
+
+assets/materiales-y-planos.jpg: copia comprimida para la portada, a partir del recurso entregado assets/architecture-premium.png.

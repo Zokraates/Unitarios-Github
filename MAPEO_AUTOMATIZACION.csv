@@ -1,0 +1,12 @@
+campo_destino,archivo_o_url_destino,origen_en_trazo,transformacion,revision_requerida,estado
+,,project.title,,,
+,,project.client,,,
+,,project.reference,,,
+,,project.date,,,
+,,project.scope,,,
+,,concepts[].code,,,
+,,concepts[].description,,,
+,,concepts[].unit,,,
+,,concepts[].quantity,,,
+,,concepts[].components[].price,,,
+,,concepts[].components[].source,,,

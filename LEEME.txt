@@ -1,0 +1,57 @@
+TRAZO · ESTUDIO DE PROPUESTAS
+Carlos Francisco Reyna Cota · México
+Entrega local personalizada · 25 de noviembre de 2026
+
+ABRIR Y EMPEZAR
+1. Extrae el ZIP completo. Mantén la carpeta assets junto a los archivos HTML.
+2. Abre index.html y entra a Mesa de trabajo (herramientas.html).
+3. Guarda los datos del proyecto y define su alcance. Los porcentajes empiezan vacíos.
+4. Crea un concepto con unidad y cantidad; luego sus componentes por unidad.
+5. Registra cada precio confirmado, su fuente y fecha. Deja vacío un precio faltante.
+6. Actualiza la vista y revisa todas las advertencias.
+7. Descarga la propuesta HTML para compartir después de revisarla. El botón Imprimir usa el diálogo del navegador, que puede ofrecer Guardar como PDF.
+8. Descarga un respaldo JSON antes de cerrar, cambiar de equipo o comenzar otra propuesta.
+
+QUÉ FUNCIONA
+Una propuesta local a la vez; conceptos y componentes editables; APU exacto; recargos explícitos; alcance y condiciones; fuentes manuales; CSV con vista previa; restauración JSON con confirmación; salida HTML autónoma y CSV. El HTML descargado incluye estilos y no necesita el sitio para abrirse.
+
+IMPORTAR
+plantillas/componentes.csv contiene SOLO encabezados, sin cifras de ejemplo. Añade tus filas reales. Una fila por componente; repite los datos del concepto. Si el concepto todavía no tiene componentes, deja todos los campos de componente vacíos.
+Los campos numéricos usan punto decimal y hasta cuatro decimales, sin separador de miles. El importador acepta coma o punto y coma como separador de columnas. Revisa GUIA_DATOS_Y_FORMULAS.md.
+El JSON es la copia completa y fiel de proyecto, condiciones y conceptos. El CSV se limita a conceptos/componentes; no incluye datos del cliente ni recargos.
+
+GUARDADO
+Los datos permanecen en este navegador cuando permite localStorage. En archivos abiertos directamente, el comportamiento puede variar. Si se bloquea o falta espacio, el trabajo sigue en memoria y se muestra un aviso. Ningún dato se envía a un servidor.
+La herramienta pide guardar o cancelar cambios de formularios antes de exportar. La vista se actualiza al pulsar su botón y los archivos usan el estado guardado.
+
+PENDIENTES REALES
+No se recibieron el código de tu web local, formatos originales ni URL del formulario a completar. No se rellenan páginas externas ni archivos Word/Excel/PDF originales. No hay búsqueda automática de precios ni IA conectada. MAPEO_AUTOMATIZACION.csv y GUIA_AUTOMATIZACION.md preparan esa siguiente fase.
+El correo de contacto abre tu aplicación de correo; tú revisas, adjuntas y envías.
+
+PUBLICACIÓN FUTURA EN NETLIFY
+La carpeta ya incluye index.html, 404.html, netlify.toml y _headers. No requiere npm ni compilación. Cuando decidas publicar, el directorio de publicación es esta misma carpeta. La entrega no ha sido desplegada.
+
+CONTENIDO
+index.html / enfoque.html / herramientas.html / contacto.html / 404.html
+assets/: CSS, JavaScript y fuentes locales
+plantillas/: encabezados para tus datos
+pruebas/: verificaciones ejecutables sobre código real
+NECESIDADES_Y_ALCANCE.md: análisis individual y criterios de aceptación
+GUIA_DATOS_Y_FORMULAS.md: esquema y cálculo
+RECURSOS_Y_LICENCIAS.txt: atribuciones y fuentes
+
+VERIFICACIÓN
+Se revisó el código y se probaron flujos en Node VM con un DOM instrumentado del HTML real. No se abrió un navegador ni se realizó inspección visual en navegador por la restricción de la sesión. QA_RESULTADOS.md explica el alcance. Para repetir las pruebas incluidas, con Node instalado: node pruebas/verificar.cjs
+
+REVISIÓN DEL 26 DE NOVIEMBRE DE 2026
+Los conceptos/componentes nuevos y los datos del proyecto muestran un control para descartar cambios sin guardar. La vista indica cuándo está pendiente de actualizarse. Al descargar o imprimir se genera la versión actual guardada; los cambios de formulario deben guardarse o descartarse primero. Los respaldos conservan el mismo formato versión 1.
+Se ajustaron tamaños de controles y metadatos y se reforzó el ajuste por CSS en anchos estrechos. 14 grupos de pruebas aprobados. No se realizó una inspección visual en navegador.
+
+LÍMITE DEL RESPALDO
+Cada cambio debe conservar un respaldo JSON de hasta 3,1 MB. Si se supera, no se guarda el cambio y se conserva el estado anterior. Descarga tu respaldo antes de dividir un trabajo extenso.
+
+CONCORDANCIA CON EL FORMULARIO — 26/11/2026
+Se contrastaron las solicitudes con las funciones del código y el contenido visible. NECESIDADES_Y_ALCANCE.md identifica qué está disponible localmente, qué cubre una parte del objetivo y qué archivo o conexión sigue faltando. Esta revisión no convierte una preparación manual en automatización conectada.
+
+INTERFAZ REVISADA
+La presentación y el espacio de trabajo se reorganizaron visualmente. Los registros, el formato de respaldo y las reglas de cálculo se conservan. La hoja de control mantiene el total y los pasos del presupuesto a la vista. Los elementos de entrada animada respetan movimiento reducido; sin JavaScript adicional, el contenido sigue visible.

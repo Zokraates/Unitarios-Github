@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-26",
+  "original_answer": {
+    "fecha": "24/11/2026, 7:44:16 p.m.",
+    "entrega": "Revisar envío de correo · respuesta guardadaActualizar estado",
+    "nombre": "CARLOS FRANCISCO REYNA COTA",
+    "email": "francisco_10995@hotmail.com",
+    "pais": "México",
+    "proyectos": "Hacer y/o revisar propuestas técnicas y económicas con ciertos archivos, también realizar precios unitarios ya que te lo pide para la realización de las propuestas económicas, claro no se toda la información para crear o realizar las propuestas ya que se ocupan materiales,etc y estaría bien que me pudiera buscar información que necesito para realizar el trabajo",
+    "objetivos": "Aprender a automatizar todo lo posible, al igual ocupo llenar campos en una página pero quisiera que fuera por automático",
+    "estado_web": "si_tengo",
+    "web_deseos": "ahorita tengo una pero local",
+    "automatizacion": "todas, pero especialmente el llenado de archivos que me piden como reportes o así",
+    "experiencia_ia": "principiante",
+    "crm": "Enviar al CRM"
+  },
+  "audit": {
+    "folder": "02_carlos_reyna_propuesta_tecnica",
+    "name": "CARLOS FRANCISCO REYNA COTA",
+    "verdict": "El enfoque de propuestas/APU concuerda con el formulario. La automatización de archivos, búsqueda de información y página externa permanece pendiente; no equivale a una solución completa de todas las solicitudes.",
+    "requirements": [
+      {
+        "source_field": "proyectos",
+        "quote": "Hacer y/o revisar propuestas técnicas y económicas con ciertos archivos",
+        "need": "Crear propuestas técnicas y económicas desde su información.",
+        "status": "parcial",
+        "evidence": [
+          "index.html: mesa de propuestas; herramientas.html: datos de proyecto y documento",
+          "assets/core.js: initial, validateProject, documentBody, documentHTML"
+        ],
+        "pending": "La herramienta genera su propio HTML desde campos y CSV. Faltan los archivos originales, su estructura y un ejemplo aprobado para reproducirlos.",
+        "coverage": "Permite registrar los datos técnicos y comerciales del proyecto y reunirlos con el presupuesto en una propuesta HTML descargable. Trabaja con los campos y datos cargados en Trazo."
+      },
+      {
+        "source_field": "proyectos",
+        "quote": "Hacer y/o revisar propuestas técnicas y económicas con ciertos archivos",
+        "need": "Revisar las propuestas y detectar faltantes.",
+        "status": "parcial",
+        "evidence": [
+          "assets/core.js: analyze comprueba precios, referencias, fechas, cliente y alcance",
+          "assets/core.js: documentBody incluye advertencias y presupuesto parcial"
+        ],
+        "pending": "No interpreta documentos externos ni valida requisitos técnicos, contractuales o de licitación; faltan archivos y criterios de revisión.",
+        "coverage": "Comprueba importes y señala precios, referencias, fechas y datos generales que faltan. Presenta esas advertencias junto al presupuesto para su revisión."
+      },
+      {
+        "source_field": "proyectos",
+        "quote": "también realizar precios unitarios",
+        "need": "Desglosar y calcular precios unitarios.",
+        "status": "local",
+        "evidence": [
+          "herramientas.html: conceptos, componentes, unidades, consumo y precio",
+          "assets/core.js: analyze usa importes escalados; GUIA_DATOS_Y_FORMULAS.md publica bases y redondeos"
+        ],
+        "pending": "Los rendimientos, especificaciones, cotizaciones y porcentajes deben provenir del trabajo de Carlos; no hay datos inventados.",
+        "coverage": "Desglosa cada concepto en componentes, consumos y precios por unidad, calcula sus importes y aplica los porcentajes introducidos. Las bases de cálculo y los redondeos están documentados."
+      },
+      {
+        "source_field": "proyectos",
+        "quote": "me pudiera buscar información que necesito para realizar el trabajo",
+        "need": "Buscar información de materiales e insumos faltantes.",
+        "status": "pendiente",
+        "evidence": [
+          "assets/core.js: validateComponent conserva source, date y reference manuales",
+          "enfoque.html: Documenta el precio que usas declara ausencia de consulta a proveedores"
+        ],
+        "pending": "Proveedores o fuentes autorizadas, materiales y especificaciones, región, moneda y criterio de vigencia. Registrar una URL no realiza una búsqueda.",
+        "coverage": "Permite guardar por componente una referencia, un enlace y la fecha de la fuente del precio. La búsqueda y comprobación de esa información siguen siendo manuales."
+      },
+      {
+        "source_field": "objetivos",
+        "quote": "llenar campos en una página pero quisiera que fuera por automático",
+        "need": "Completar una página externa automáticamente.",
+        "status": "pendiente",
+        "evidence": [
+          "GUIA_AUTOMATIZACION.md: secuencia y condiciones de integración",
+          "MAPEO_AUTOMATIZACION.csv: matriz con destinos todavía vacíos"
+        ],
+        "pending": "URL exacta, flujo, campos, cuenta autorizada y reglas de preparación/envío. No hay robot ni conexión externa activa.",
+        "coverage": "Incluye una matriz para relacionar los datos de la propuesta con los campos de una página y una guía para preparar la integración. No ejecuta el llenado de una página externa."
+      },
+      {
+        "source_field": "automatizacion",
+        "quote": "especialmente el llenado de archivos que me piden como reportes o así",
+        "need": "Llenar reportes y formatos originales.",
+        "status": "pendiente",
+        "evidence": [
+          "assets/core.js: documentHTML y exportCSV producen archivos nuevos de Trazo",
+          "contacto.html: solicita formato vacío y ejemplo revisado"
+        ],
+        "pending": "Plantillas originales Word/Excel/PDF u otros formatos, versiones, campos y reglas de salida. La descarga de un HTML nuevo no rellena esos archivos.",
+        "coverage": "Genera una propuesta HTML propia y exporta tablas CSV y respaldos JSON. Todavía no completa los formatos originales de reportes que utiliza Carlos."
+      },
+      {
+        "source_field": "web_deseos",
+        "quote": "ahorita tengo una pero local",
+        "need": "Considerar la web local ya existente.",
+        "status": "no_especificado",
+        "evidence": [
+          "enfoque.html: se explica que Trazo es independiente y no modifica la web anterior",
+          "LEEME.txt: pendientes reales"
+        ],
+        "pending": "No se recibió código o dirección ni se especificó un rediseño de esa web. Su integración requiere el proyecto original y el punto de incorporación.",
+        "coverage": "Trazo se entrega como herramienta independiente que puede abrirse localmente. La web que Carlos ya tenía no fue modificada ni integrada."
+      }
+    ],
+    "changes": [
+      {
+        "file": "index.html",
+        "detail": "La portada ahora dice «De tus datos a una propuesta revisable», evitando sugerir una lectura completa de archivos originales."
+      },
+      {
+        "file": "enfoque.html",
+        "detail": "La introducción distingue datos verificados, cálculo y revisión del documento."
+      },
+      {
+        "file": "herramientas.html; assets/core.js; GUIA_DATOS_Y_FORMULAS.md",
+        "detail": "Ayudas de tamaño alineadas con los límites vigentes: CSV 2,1 MB y JSON 3,1 MB. No cambió la regla."
+      },
+      {
+        "file": "pruebas/generar_dom.py; pruebas/herramientas-dom.json",
+        "detail": "Generador añadido y fixture regenerada desde el HTML exacto después del cambio de ayudas."
+      },
+      {
+        "file": "NECESIDADES_Y_ALCANCE.md; LEEME.txt",
+        "detail": "Se añade conclusión de concordancia y distinción de funciones pendientes."
+      }
+    ],
+    "tests": [
+      "Lectura completa de formulario, contenido visible, guías y funciones analyze/importCSV/documentBody.",
+      "Sintaxis core.js: node --check PASS.",
+      "Contraste de hash confirma que el único cambio JS es el texto de ayuda del límite.",
+      "IDs, enlaces y fragmentos locales PASS; fixture con SHA del HTML vigente."
+    ],
+    "source_record": {
+      "date": "24/11/2026, 7:44:16 p.m.",
+      "country": "México",
+      "experience": "principiante",
+      "email": "francisco_10995@hotmail.com"
+    },
+    "changed_files": [
+      "02_carlos_reyna_propuesta_tecnica/GUIA_DATOS_Y_FORMULAS.md",
+      "02_carlos_reyna_propuesta_tecnica/enfoque.html",
+      "02_carlos_reyna_propuesta_tecnica/NECESIDADES_Y_ALCANCE.md",
+      "02_carlos_reyna_propuesta_tecnica/index.html",
+      "02_carlos_reyna_propuesta_tecnica/herramientas.html",
+      "02_carlos_reyna_propuesta_tecnica/LEEME.txt",
+      "02_carlos_reyna_propuesta_tecnica/assets/core.js",
+      "02_carlos_reyna_propuesta_tecnica/pruebas/generar_dom.py",
+      "02_carlos_reyna_propuesta_tecnica/pruebas/herramientas-dom.json"
+    ]
+  }
+}
